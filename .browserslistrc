@@ -1,0 +1,5 @@
+# Browsers that we support
+
+cover 99.5%
+not ie <= 8
+maintained node versions
