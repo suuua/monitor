@@ -41,6 +41,12 @@ export function includes(arr: Array<any>, item: any) {
   return false;
 }
 
+/**
+ * 对比2个对象是否相当，注意这里没有处理对象的循环引用问题，当对象循环引用会导致死循环。
+ * 实际使用中不会遇到，因此暂不考虑循环引用问题。
+ * @param {Object} a 
+ * @param {Object} b 
+ */
 export function isObjectEqual(a?: {} = {}, b?: {} = {}) {
   if (!a || !b) return a === b;
   const aKeys = Object.keys(a);
